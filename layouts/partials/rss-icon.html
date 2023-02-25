@@ -1,5 +1,5 @@
-{{ with .OutputFormats.Get "Rss" }}
+{{ if .OutputFormats.Get "Rss" }}
     <li><a href="{{ .RelPermalink }}" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
-<!-- {{ else }}
-    <li><a href="{{ .Site.RSSLink }}" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li> -->
+{{ else }}
+    <li><a href="{{ .Site.RSSLink }}" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
 {{ end }}
